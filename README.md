@@ -49,3 +49,25 @@ if age >= 21 or age >= 18 and (show_time != 'Evening' or is_member):
     print('Final price of ticket:', final_price)
 else:
     print('Ticket booking failed due to restrictions')
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+day2
+Build an Apply Discount Function
+
+def apply_discount(price, discount):
+    if not isinstance(price, (int, float)):
+        return('The price should be a number')
+
+    elif not isinstance(discount, (int, float)):
+        return('The discount should be a number')
+    
+    elif price <= 0:
+        return('The price should be greater than 0')
+    elif discount < 0 or discount > 100:
+        return('The discount should be between 0 and 100')
+
+    final_price = price - (price * (discount / 100))
+    return final_price
+
