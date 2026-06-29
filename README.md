@@ -71,3 +71,8 @@ def apply_discount(price, discount):
     final_price = price - (price * (discount / 100))
     return final_price
 
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+shift = 5
+shifted_alphabet = alphabet[shift:]
+print(shifted_alphabet)
+
